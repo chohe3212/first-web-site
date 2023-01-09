@@ -1,57 +1,34 @@
 <!doctype html>
 <html>
-    
   <head>
     <title>WEB1 - html</title> 
     <meta charset="utf-8"> <!--한국어-->
-    <style>
-    body{
-      margin:0;
-    }
-    a { 
-      color : black;
-      text-decoration: none;
-    }
-  /*태그선택자 < 클래스 선택자 < id선택자
-  같은 선택자면 마지막 선택자가 우선순위가 높음.
-  
-  id 선택자가 우선순위가 높다. id 선택자는 
-  
-  #이름{
-    속성
-  }
-    이렇게 씀
-  
-    밑에 saw는 클래스 선택자임
-    */
-    .saw{
-      color : gray;
-    }
-    h1 {
-      font-size: 45px;
-      text-align : center;
-      border-bottom:1px solid gray;
-      margin: 0;
-      padding :20px;
-    }
-    ol{
-      border-right :1px solid gray;
-      width:100px;
-      margin: 10px;
-      padding :20px;
-
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
-
   <!--본문-->
   <body>
-    <h1><a href="index.html">WEB</a></h1>
+    <div class = "mode_change" > 
+      <input type = "button" value = "day mode" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.getElementById('h1web').style.color = 'black';
+        document.getElementById('listSelected').style.color = 'black';
+      ">
+      <input type = "button" value="night mode" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.getElementById('h1web').style.color = 'white';
+        document.getElementById('listSelected').style.color = 'white';
+      ">
+    </div>
+    <h1><a href="index.html" id = h1web>WEB</a></h1>
+    <div id = "grid">
     <ol>
-      <li><a href="1.html" >HTML</a></li>
+      <li><a href="1.html" id = listSelected>HTML</a></li>
       <li><a href="2.html" class = "saw">CSS</a></li>
       <li><a href="3.html" class = "saw">JavaScript</a></li>
     </ol>
+    <div id="article">
     <h2>HTML이란 무엇인가?</h2>
     <p>The <a href = https://www.w3.org/TR/2011/WD-html5-20110405/
       target = "_blank" title = "html5 speicification">Hypertext Markup Langage(HTML)</a>
@@ -60,7 +37,7 @@
     technologies such as <u>Cascading Style Sheets (CSS)</u> and
     scripting languages such as JavaScript.</p>
 
-    <img src="htmlimg.jpg" width = "100%">
+    <img src="htmlimg.jpg" width = "80%">
 
     <p>Web browsers receive HTML documents from a
       web server or from local storage and render
@@ -68,5 +45,7 @@
       HTML describes the structure of a web page
       semantically and originally included cues for
       the appearance of the document.</p>
+    </div>
+  </div>
   </body>
 </html>

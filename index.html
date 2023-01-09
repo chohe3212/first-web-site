@@ -3,49 +3,44 @@
 <head>
   <title>WEB1 - index</title>
   <meta charset="utf-8">
-  <style>
-    body{
-      margin:0;
-    }
-  a {
-    color : black;
-    text-decoration: none;
-  }
-  h1 {
-      font-size: 45px;
-      text-align : center;
-      border-bottom:1px solid gray;
-      margin: 0;
-      padding :20px;
-    }
-    ol{
-      border-right :1px solid gray;
-      width:100px;
-      margin: 10px;
-      padding :20px;
-
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1><a href="index.html">WEB</a></h1>
+  <div class = "mode_change" > 
+    <input type = "button" value = "day mode" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.getElementById('h1web').style.color = 'black';
+    document.getElementById('listSelected').style.color = 'black';
+  ">
+  <input type = "button" value="night mode" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.getElementById('h1web').style.color = 'white';
+    document.getElementById('listSelected').style.color = 'white';
+  ">
+  </div>
+  <h1><a href="index.html" id = h1web >WEB</a></h1>
+  <div id = "grid">
   <ol>
-    <li> <a href="1.html">HTML</a></li>
-    <li> <a href="2.html">CSS</a></li>
-    <li> <a href="3.html">JavaScript</a></li>
+    <li> <a href="1.html" id = listSelected >HTML</a></li>
+    <li> <a href="2.html" id = listSelected >CSS</a></li>
+    <li> <a href="3.html" id = listSelected >JavaScript</a></li>
   </ol>
-
+  <div id="article">
   <h2>Index - World Wide Web</h2>
   <p>The World Wide Web (WWW), commonly known as the Web,
     is an information system enabling documents and other
     web resources to be accessed over the Internet.</p>
-    <img src="webimg.jpg" width = "70%" >
+    <img src="webimg.jpg" width = "80%" >
 
 
   <p>Documents and downloadable media are made available to the network
     through web servers and can be accessed by programs such as web browsers.
      Servers and resources on the World Wide Web are identified and located
      through character strings called uniform resource locators (URLs). </p>
-</body>
+    </div>
+  </div>
+  </body>
 </html>
